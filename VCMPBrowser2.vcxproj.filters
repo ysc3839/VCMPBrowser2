@@ -39,6 +39,9 @@
     <ClInclude Include="Controls.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListViewUtil.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VCMPBrowser2.cpp">

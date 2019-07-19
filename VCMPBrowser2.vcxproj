@@ -165,6 +165,7 @@
     <ClInclude Include="HiDPI.hpp" />
     <ClInclude Include="I18n.hpp" />
     <ClInclude Include="Controls.hpp" />
+    <ClInclude Include="ListViewUtil.hpp" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

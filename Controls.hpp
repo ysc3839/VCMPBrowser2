@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ListViewUtil.hpp"
+
 HWND g_hMainWnd;
 HWND g_hWndLVServers;
 HWND g_hWndLVHistory;
@@ -65,9 +67,7 @@ void CreateControls(HWND hWnd)
 	g_hWndLVServers = CreateWindowW(WC_LISTVIEWW, nullptr, WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA, 0, 0, 0, 0, hWnd, nullptr, g_hInst, nullptr);
 	if (g_hWndLVServers)
 	{
-		// FIXME: Move to ListViewUtil.hpp
-		SetWindowTheme(g_hWndLVServers, L"Explorer", nullptr);
-		ListView_SetExtendedListViewStyle(g_hWndLVServers, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER | LVS_EX_HEADERDRAGDROP);
+		LVEnableVisualStyles(g_hWndLVServers, LVS_EX_HEADERDRAGDROP);
 
 		ListView_SetImageList(g_hWndLVServers, hImlLocks, LVSIL_SMALL);
 
@@ -109,9 +109,7 @@ void CreateControls(HWND hWnd)
 	g_hWndLVHistory = CreateWindowW(WC_LISTVIEWW, nullptr, WS_CHILD | WS_CLIPSIBLINGS | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA, 0, 0, 0, 0, hWnd, nullptr, g_hInst, nullptr);
 	if (g_hWndLVHistory)
 	{
-		// FIXME: Move to ListViewUtil.hpp
-		SetWindowTheme(g_hWndLVHistory, L"Explorer", nullptr);
-		ListView_SetExtendedListViewStyle(g_hWndLVHistory, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER | LVS_EX_HEADERDRAGDROP);
+		LVEnableVisualStyles(g_hWndLVHistory, LVS_EX_HEADERDRAGDROP);
 
 		ListView_SetImageList(g_hWndLVHistory, hImlLocks, LVSIL_SMALL);
 
@@ -189,8 +187,7 @@ void CreateControls(HWND hWnd)
 	g_hWndLVPlayers = CreateWindowW(WC_LISTVIEW, nullptr, WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_SINGLESEL | LVS_OWNERDATA, 0, 0, 0, 0, hWnd, nullptr, g_hInst, nullptr);
 	if (g_hWndLVPlayers)
 	{
-		SetWindowTheme(g_hWndLVPlayers, L"Explorer", nullptr);
-		ListView_SetExtendedListViewStyle(g_hWndLVPlayers, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER | LVS_EX_AUTOSIZECOLUMNS);
+		LVEnableVisualStyles(g_hWndLVPlayers, LVS_EX_AUTOSIZECOLUMNS);
 
 		LVCOLUMNW lvc;
 		lvc.mask = LVCF_WIDTH;
