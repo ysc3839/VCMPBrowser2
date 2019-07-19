@@ -3,7 +3,7 @@
   <assemblyIdentity
     version="1.0.0.0"
     processorArchitecture="*"
-    name="ysc3839.VCMPBrowser2"
+    name="com.ysc3839.vcmpbrowser2"
     type="win32"
   />
   <description>VCMPBrowser2</description>
