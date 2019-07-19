@@ -162,7 +162,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Header.h" />
     <ClInclude Include="HiDPI.hpp" />
     <ClInclude Include="I18n.hpp" />
     <ClInclude Include="Controls.hpp" />
@@ -182,11 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="VCMPBrowser2.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\VCMP.bmp" />
-    <Image Include="small.ico" />
-    <Image Include="VCMPBrowser2.ico" />
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="VCMPBrowser2.manifest" />

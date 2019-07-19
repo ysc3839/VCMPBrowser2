@@ -39,9 +39,6 @@
     <ClInclude Include="Controls.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VCMPBrowser2.cpp">
@@ -55,17 +52,6 @@
     <ResourceCompile Include="VCMPBrowser2.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="VCMPBrowser2.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\VCMP.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="VCMPBrowser2.manifest">
