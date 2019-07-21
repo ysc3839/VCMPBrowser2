@@ -65,4 +65,13 @@ const wchar_t* Translate(const wchar_t* str)
 	return translation;
 }
 
+const wchar_t* TranslateContext(const wchar_t* str, const wchar_t* ctxtStr)
+{
+	auto translation = Translate(ctxtStr);
+	if (translation == ctxtStr)
+		return str;
+	return translation;
+}
+
 #define _(str) Translate(str)
+#define C_(ctxt, str) TranslateContext(str, ctxt L"\004" str)
