@@ -36,7 +36,7 @@ void LoadTranslateData()
 			{
 				auto hash = ymo->table[i].hash;
 				auto offset = ymo->table[i].offset;
-				const wchar_t* str = reinterpret_cast<const wchar_t*>(reinterpret_cast<const uint8_t*>(hResData) + offset);
+				auto str = reinterpret_cast<const wchar_t*>(reinterpret_cast<const uint8_t*>(hResData) + offset);
 				hashToStrMap.emplace(hash, str);
 			}
 		}

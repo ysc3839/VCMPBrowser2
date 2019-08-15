@@ -31,7 +31,7 @@ void UpdateDpiDependentFontsAndResources()
 	NONCLIENTMETRICSW ncm = { sizeof(ncm) };
 	if (_SystemParametersInfoForDpi(SPI_GETNONCLIENTMETRICS, sizeof(ncm), &ncm, 0, g_dpi))
 	{
-		hFont = CreateFontIndirect(&ncm.lfMessageFont);
+		hFont = CreateFontIndirectW(&ncm.lfMessageFont);
 		g_hFont.reset(hFont);
 	}
 	if (!hFont)
