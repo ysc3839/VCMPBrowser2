@@ -161,6 +161,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EditControlUtil.hpp" />
     <ClInclude Include="FnvHash.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HiDPI.hpp" />
