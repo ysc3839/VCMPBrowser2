@@ -156,7 +156,6 @@ void CreateControls(HWND hWnd)
 	{
 		Edit_SetCueBannerText(g_hWndEditName, _(L"Name"));
 		Edit_LimitText(g_hWndEditName, PLAYER_NAME_MAX_LEN);
-		Edit_EnableSearchWeb(g_hWndEditName, TRUE);
 	}
 
 	g_hWndTab = CreateWindowW(WC_TABCONTROLW, nullptr, WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE, 0, 0, 0, 0, hWnd, nullptr, g_hInst, nullptr);
@@ -214,7 +213,6 @@ void CreateControls(HWND hWnd)
 		{
 			g_hWndStaticList[i] = CreateWindowW(WC_STATICW, infoTexts[i], WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE | SS_RIGHT, 0, 0, 0, 0, g_hWndGB2, nullptr, g_hInst, nullptr);
 			g_hWndEditList[i] = CreateWindowW(WC_EDITW, nullptr, WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE | ES_READONLY | ES_AUTOHSCROLL, 0, 0, 0, 0, g_hWndGB2, nullptr, g_hInst, nullptr);
-			Edit_EnableSearchWeb(g_hWndEditList[i], TRUE);
 		}
 	}
 
