@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - uses: warrenbuckley/Setup-MSBuild@v1
+    - run: msbuild VCMPBrowser2.sln /p:Platform="x86" /p:Configuration=Release
